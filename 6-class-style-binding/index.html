@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Class Style Binding</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="bgColor" />
+      <button @click="showBorder =! showBorder">Border Ekle / Çıkar</button>
+      <button @click="redBg =! redBg">RedBg Ekle / Çıkar</button>
+      <div
+        class="box"
+        :class="boxClasses"
+        :style="{ backgroundColor : bgColor }"
+      ></div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
